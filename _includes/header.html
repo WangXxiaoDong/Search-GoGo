@@ -22,6 +22,7 @@
             {%- elsif page.active_key == 'donate' -%}
                 <h2 class="ui inverted header">请为辛苦滴开发者众筹一杯星冰乐</h2>
             {%- endif -%}
+            {% if page.active_key == 'home' or page.active_key == 'analytics' %}{% include page_loading_progress_bar.html %}{% endif %}
         </div>
     {%- endif -%}
 </div>
