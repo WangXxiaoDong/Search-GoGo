@@ -1,5 +1,5 @@
 repository: Search-GoGo/Search-GoGo
-repository_url: https://github.com/wxdonger/Search-GoGo
+repository_url: https://github.com/WangXxiaoDong/Search-GoGo
 
 timezone: Asia/Shanghai
 lang: zh_CN
@@ -9,11 +9,11 @@ alias_en: Search-GoGo
 alias_cn: Search-GoGo
 description: A Navigation Website
 keywords: Search-GoGo, Navigation
-url: https://busline.cc
+url: https://searchgogo.cc
 established_at: "2016-10-01T00:00+08:00"
 
-author: wxdonger
-author_url: https://github.com/wxdonger
+author: WangXxiaoDong
+author_url: https://github.com/WangXxiaoDong
 
 image: /images/logo.png
 logo: /images/logo.png

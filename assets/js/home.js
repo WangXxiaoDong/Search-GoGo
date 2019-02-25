@@ -77,10 +77,10 @@ setInterval(function () {
 
 // search
 $('#search-services').dropdown();
-if (Cookies.get('byr_navi_previous_search_service_option') === undefined || Cookies.get('byr_navi_previous_search_service_option') === '' || $('#' + Cookies.get('byr_navi_previous_search_service_option')).length === 0) {
-    Cookies.set('byr_navi_previous_search_service_option', $('#search-services').val(), { expires: 365 });
+if (Cookies.get('search_gogo_previous_search_service_option') === undefined || Cookies.get('search_gogo_previous_search_service_option') === '' || $('#' + Cookies.get('search_gogo_previous_search_service_option')).length === 0) {
+    Cookies.set('search_gogo_previous_search_service_option', $('#search-services').val(), { expires: 365 });
 } else {
-    $('#search-services').dropdown('set selected', Cookies.get('byr_navi_previous_search_service_option'));
+    $('#search-services').dropdown('set selected', Cookies.get('search_gogo_previous_search_service_option'));
 };
 
 $('#search-button').click(function () {
@@ -88,7 +88,7 @@ $('#search-button').click(function () {
     var query = $('#search-query').val();
     query = encodeURIComponent(query);
     if (query) {
-        Cookies.set('byr_navi_previous_search_service_option', service.val(), { expires: 365 });
+        Cookies.set('search_gogo_previous_search_service_option', service.val(), { expires: 365 });
         window.open('search/?service=' + encodeURIComponent(service.text()) + '&query=' + query + '&next=' + encodeURIComponent(service.attr('data-url') + query.replace(new RegExp(service.attr('data-transcode-from'), 'g'), service.attr('data-transcode-to')) + service.attr('data-suffix')), '_blank');
     } else {
         $('#search-div').addClass('error');
@@ -117,7 +117,7 @@ $(window).keyup(function (event) {
         query = encodeURIComponent(query);
         if (query) {
             if ($('#search-query:focus').length > 0) {
-                Cookies.set('byr_navi_previous_search_service_option', service.val(), { expires: 365 });
+                Cookies.set('search_gogo_previous_search_service_option', service.val(), { expires: 365 });
                 window.open('search/?service=' + encodeURIComponent(service.text()) + '&query=' + query + '&next=' + encodeURIComponent(service.attr('data-url') + query + service.attr('data-suffix')), '_blank');
             } else {
                 $('#search-query').focus().select();
@@ -144,7 +144,7 @@ $('.shortcuts .ui.label').each(function () {
         var query = $('#search-query').val();
         query = encodeURIComponent(query);
         if (query) {
-            Cookies.set('byr_navi_previous_search_service_option', service.val(), { expires: 365 });
+            Cookies.set('search_gogo_previous_search_service_option', service.val(), { expires: 365 });
             $('#search-services').dropdown('set selected', service.val());
             window.open('search/?service=' + encodeURIComponent(service.text()) + '&query=' + query + '&next=' + encodeURIComponent(service.attr('data-url') + query + service.attr('data-suffix')), '_blank');
         } else {
