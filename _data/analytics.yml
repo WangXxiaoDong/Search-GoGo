@@ -2,7 +2,7 @@ google:
   id: UA-135215036-1
 
 matomo:
-  url: http://39.106.13.187
+  url: //39.106.13.187/
   domains:
   - "*.searchgogo.cc"
   site_id: 1
